@@ -41,3 +41,17 @@ python tarea2_aspirador/aspirador_autonomo.py
 ```
 
 Para salir de cualquier simulación, cierra la ventana de Pygame.
+
+## Mejoras implementadas (las que pide el documento del profesor)
+
+### Tarea 1 — Agente reactivo
+
+- **Múltiples agentes**: ahora hay 3 agentes simultáneos (verde, azul y amarillo) que interactúan evitándose entre sí, además de los obstáculos y los bordes.
+- **Control manual**: el agente verde se controla con las **flechas del teclado** mientras los demás siguen siendo reactivos, para comparar ambos comportamientos en paralelo. Tecla **M** para activar/desactivar el modo manual (con M desactivado, todos son reactivos).
+- **Heurísticas en el cambio de dirección**: en lugar de cambiar de dirección al azar, el agente "siente" el espacio libre hacia adelante (sensor de 8 pasos) y elige la dirección con más espacio. Tecla **H** para alternar entre heurística y la elección aleatoria original y así compararlas.
+
+### Tarea 2 — Aspirador autónomo
+
+- **Movimiento optimizado**: antes de moverse al azar, el aspirador mira las 4 celdas vecinas; si alguna está sucia, va hacia ella (busca la suciedad cercana).
+- **Múltiples aspiradores**: hay 3 aspiradores (verde, azul y amarillo) limpiando en colaboración sobre la misma cuadrícula; evitan ocupar la misma celda.
+- **Estadísticas**: se registran y muestran el número de movimientos, celdas limpiadas, celdas sucias restantes y tiempo transcurrido (en la consola, cada vez que se limpia una celda). Al terminar (entorno totalmente limpio), la simulación se detiene y muestra el resultado final. En la ventana se ve una **barra de progreso** con el porcentaje del entorno limpio.
